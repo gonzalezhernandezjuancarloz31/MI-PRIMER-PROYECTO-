@@ -1,0 +1,94 @@
+/* Estilos personalizados para el Portal de Cálculo Diferencial - ITCM */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+:root {
+  --itcm-guinda: #7B1113;
+  --itcm-guinda-dark: #580c0d;
+  --itcm-guinda-light: #9c1719;
+  --itcm-oro: #D4AF37;
+  --itcm-oro-light: #F3E5AB;
+  --itcm-oro-dark: #AA820A;
+}
+
+body {
+  font-family: 'Outfit', sans-serif;
+  scroll-behavior: smooth;
+}
+
+code, pre, .font-mono {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* Scrollbar estilizado */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0f172a;
+}
+::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #7B1113;
+}
+
+/* Efectos de fondo con brillo */
+.glow-guinda {
+  background: radial-gradient(circle at 50% 50%, rgba(123, 17, 19, 0.25) 0%, rgba(15, 23, 42, 0) 70%);
+}
+
+.glow-gold {
+  background: radial-gradient(circle at 50% 50%, rgba(212, 175, 55, 0.2) 0%, rgba(15, 23, 42, 0) 70%);
+}
+
+/* Glassmorphism */
+.glass-panel {
+  background: rgba(30, 41, 59, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-panel-hover:hover {
+  background: rgba(30, 41, 59, 0.85);
+  border-color: rgba(212, 175, 55, 0.3);
+}
+
+/* Tarjeta activa en tabs */
+.tab-btn.active {
+  background: linear-gradient(135deg, #7B1113 0%, #9c1719 100%);
+  color: #ffffff;
+  border-color: #D4AF37;
+  box-shadow: 0 4px 15px rgba(123, 17, 19, 0.4);
+}
+
+/* KaTeX custom sizing in cards */
+.katex-display {
+  margin: 0.6em 0 !important;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 0.2em 0;
+}
+
+.katex {
+  font-size: 1.08em;
+}
+
+/* Animación de entrada suave */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Badge decorativo TecNM */
+.badge-tecnm {
+  background: linear-gradient(90deg, #7B1113 0%, #580c0d 100%);
+  border: 1px solid rgba(212, 175, 55, 0.4);
+}
